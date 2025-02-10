@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="PT-br">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de cadastro</title>
+</head>
+<body> 
+    <div class="container">
+        <div class="form-image">
+        </div>
+
+    <div class="form">
+        <form action="#">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</Cadastre-se></h1>
+                </div>
+                  
+                <div class="login-button">
+                    <button><a href="#">Entrar</a></button>
+                </div>
+     </div>
+        
+        <div class="input-group">
+
+            <div class="input-box">
+                <label for="firstname">Primeiro nome</label>
+                <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+            </div>
+
+            <div class="input-box">
+                <label for="lestname">Sobrenome</label>
+                <input id="lestname" type="text" name="lestname" placeholder="Digite seu Sobrenome" required>
+            </div>
+
+            <div class="input-box">
+                <label for="email">E-mail</label>
+                <input id="email" type="text" name="email" placeholder="Digite seu primeiro E-mail" required>
+            </div>
+
+            <div class="input-box">
+                <label for="number">Telefone</label>
+                <input id="number" type="text" name="number" placeholder="(XX) XXXX-XXXX" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Senha</label>
+                <input id="password" type="text" name="password" placeholder="Digite sua senha" required>
+            </div>
+            
+            <div class="input-box">
+                <label for="confirmpassword">Confirme sua senha</label>
+                <input id="confirmpassword" type="text" name="confirmpassword" placeholder="Confirme a senha" required>
+            </div>
+    
+        </div>
+        <div id="termo-compromisso">
+            <h3>Termo de Compromisso</h3>
+            
+            <p>
+                Ao clicar em "Aceito", você concorda com os <a href="termo-de-compromisso.html" target="_blank">termos de uso</a> e a <a href="politica-de-privacidade.html" target="_blank">política de privacidade</a> do nosso site.
+            </p>
+            
+            <div class="termos-checkbox">
+                <input type="checkbox" id="termo-aceito" required>
+                <label for="termo-aceito">Eu li e concordo com os termos de compromisso.</label>
+            </div>
+            
+        </div>
+        
+        <script>
+            // Habilitar o botão "Aceito" apenas quando a caixa de seleção estiver marcada
+            document.getElementById('termo-aceito').addEventListener('change', function() {
+                document.getElementById('submit-btn').disabled = !this.checked;
+            });
+
+        </script>
+            <div class="continue-button"> 
+                <button><a href="#">Continuar</a></button>
+            </div>
+        
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

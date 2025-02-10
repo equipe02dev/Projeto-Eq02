@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Inter', sans-serif;
+}
+
+body {
+    width: 170%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8348B7;
+    background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) no-repeat center center fixed;
+    background-size: 100%; /* Reduz o tamanho da imagem para 50% */
+}
+
+
+.container {
+    width:80%;
+    height: 90vh;
+    display: flex;
+
+}
+
+.form {
+    width: 80%;
+    max-width: 800px;
+    min-height: 500px; /* Faz o fundo crescer verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+
+.form-header{
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content:space-between ;
+    font-size: 20px;
+}
+
+.form-header h1::after{
+    content:'';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #134A28;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: none;
+    background-color:#134A28;
+    padding: 0.4rem 1rem;
+    border-radius: 5px; ;
+    cursor: pointer;
+}
+.login-button button:hover {
+    background-color: #227040;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 1rem; /* Adiciona espaçamento entre os inputs */
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.input-box input {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%; /* Faz o input ocupar 100% da largura disponível */
+    max-width: 500px; /* Limita a largura máxima do input */
+    height: 3rem; /* Aumenta a altura do input */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+}
+
+.input-box input:hover{
+    background-color:#eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #134A28;
+
+}
+.continue-button button {
+    width: 35%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #134A28;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #227040;
+}
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93;
+    font-weight: 500;
+    color: #fff;
+}
+#termo-compromisso {
+    padding: 2px;
+    border-radius: 8px;
+    max-width: 600px;  /* Limita a largura */
+    margin: 10px;  /* Centraliza na tela */
+}
+
+#termo-compromisso h3 {
+    font-size: 14px;
+    color: #134A28;  /* Cor de destaque para o título */
+    margin-bottom: 0px;
+}
+
+#termo-compromisso p {
+    font-size: 10px;
+    color: #555;  /* Cor mais suave para o texto */
+    margin-bottom:5px;
+}
+
+#termo-compromisso a {
+    color: #45c475;  /* Cor para os links */
+    text-decoration: none;  /* Remove sublinhado dos links */
+}
+
+#termo-compromisso a:hover {
+    text-decoration: underline;  /* Sublinha ao passar o mouse */
+}
+
+.termos-checkbox {
+    margin-bottom: 0px;  /* Espaçamento abaixo da caixa de seleção */
+}
+
+.termos-checkbox input[type="checkbox"] {
+    margin-right: 10px;  /* Espaço entre o checkbox e o texto */
+}
