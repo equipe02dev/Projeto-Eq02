@@ -1,0 +1,198 @@
+/* Estilização geral */
+body {
+  background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
+  background-color: #8348B7;
+  background-size: 1378px 698px;
+  font-family: Arial, sans-serif;
+  background-color: #f201fa;
+  margin: 0;
+  padding:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.tela_doacao h1::after{
+  content:'';
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #134A28;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+h1{
+  font-size: 28px;
+}
+/* Container principal */
+.tela_doacao {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 400px; /* Ajuste conforme necessário */
+}
+
+
+/* Estilização da capa */
+.capa {
+  height: 10px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+}
+
+/* Controles de quantidade */
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribui os elementos igualmente */
+  gap: 10px; /* Espaço entre os elementos */
+  background-color: rgba(255, 255, 255, 3px);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+/* Botões de adicionar e subtrair */
+button {
+  background-color: #134A28;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Deixa o botão redondo */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-left: 8px; /* Espaçamento entre o input de texto e os outros elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+  background-color: #18723b;
+  transform: scale(1.1); /* Efeito de leve aumento ao passar o mouse */
+}
+
+/* Efeito ao clicar */
+button:active {
+  transform: scale(0.95); /* Dá um efeito de "pressionado" */
+}
+/* Inputs */
+input[type="number"] {
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 8px; /* Adiciona espaço entre o input de texto e os outros elementos */
+}
+
+h3 {
+  flex-grow: 1; /* Faz o título ocupar o espaço necessário */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap; /* Evita quebra de linha */
+}
+
+/* Input de texto alinhado corretamente à direita */
+input[type="text"] {
+  flex-grow: 1; /* Faz com que o input ocupe espaço disponível */
+  padding: 8px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+  background-color: #fff; /* Fundo branco */
+  text-align: left; /* Garante que o texto dentro do input fique à direita */
+  outline: none; /* Remove a borda azul ao clicar */
+  transition: border 0.3s ease-in-out;
+  max-width: 300px; /* Limita o tamanho máximo do input */
+  min-width: 200px; /* Define um tamanho mínimo para não ficar pequeno demais */
+}
+
+/* Efeito ao focar no input */
+input[type="text"]:focus {
+  border-color: #6e8efb; /* Muda a borda ao clicar */
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5); /* Sombra azul ao focar */
+}
+
+h3 {
+  flex-grow: 1;  /* Permite que o título ocupe o espaço necessário */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remove margens padrão */
+  text-align: left; /* Mantém alinhado à esquerda */
+  white-space: nowrap; /* Evita que o texto quebre */
+}
+#description {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 300px; /* Define um tamanho máximo */
+  padding: 8px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+  background-color: #fff; /* Fundo branco */
+  margin-left: 10px; /* Espaço entre os elementos ao lado */
+  outline: none; /* Remove a borda azul ao clicar */
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efeito ao focar no input */
+#description:focus {
+  border-color: #6e8efb; /* Muda a borda ao clicar */
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5); /* Sombra azul ao focar */
+}
+
+/* Ajuste para melhor alinhamento dentro de um flex container */
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os elementos */
+}
+/* Ajuste do container do botão */
+.login-button {
+
+  justify-content: center; /* Centraliza o botão */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilização do botão */
+.login-button button {
+  background-color: #134A28; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px; /* Aumenta o tamanho do botão */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%; /* Faz o botão ocupar toda a largura disponível */
+  max-width: 300px; /* Define um tamanho máximo para o botão */
+}
+
+/* Efeito ao passar o mouse */
+.login-button button:hover {
+  background-color: #18723b;
+  transform: scale(1.05); /* Pequeno aumento ao passar o mouse */
+}
+
+/* Efeito ao clicar */
+.login-button button:active {
+  transform: scale(0.95); /* Efeito de pressionado */
+}
+
+

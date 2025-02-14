@@ -1,0 +1,75 @@
+body {
+    background-image: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png);
+    background-color: #8348B7;
+    background-size: 1378px 698px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+.confirmacao-agendamento {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.confirmacao-agendamento h1 {
+    font-size: 24px;
+    color: #134A28;
+    margin-bottom: 20px;
+}
+
+.detalhes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.detalhes-item {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.detalhes-item span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.detalhes-item strong {
+    color: #134A28;
+}
+
+.botao-voltar {
+    margin-top: 20px;
+}
+
+.botao-voltar button {
+    padding: 10px 20px;
+    background-color: #134A28;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-voltar button:hover {
+    background-color: #13ee67;
+}
+
+.botao-voltar button:active {
+    transform: scale(0.95);
+}
