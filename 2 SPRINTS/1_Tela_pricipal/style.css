@@ -27,7 +27,7 @@ body {
     top: 0; /* Vai ficar no topo da página */
     left: 0; /* Alinha à esquerda */
     width: 100%; /* O menu ocupa toda a largura da tela */
-    padding: 30px 10px; /* Ajusta o espaço interno, com espaçamento lateral */
+    padding: 15px 5px; /* Ajusta o espaço interno, com espaçamento lateral */
     justify-content: space-between; /* Distribui os itens com espaço entre */
     align-items: center; /* Centraliza verticalmente os itens */
     height: 100px; /* Altura do menu */
@@ -474,7 +474,7 @@ footer {
 }
 
 #footer_subscribe input[type="email"]:focus {
-    border-color: #31d16f; /* Cor ao focar no input */
+    border-color: #134A28; /* Cor ao focar no input */
 }
 
 #footer_subscribe button {

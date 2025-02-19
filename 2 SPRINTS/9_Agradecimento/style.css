@@ -42,11 +42,11 @@ body {
     margin-bottom: 20px;
 }
 
-.botao-home {
+.continue-button {
     margin-top: 30px;
 }
 
-.botao-home button {
+.continue-button button {
     padding: 10px 25px;
     background-color: #134A28;
     color: white;
@@ -58,10 +58,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.botao-home button:hover {
+.continue-button button:hover {
     background-color: #227040;
 }
 
-.botao-home button:active {
+.continue-button button:active {
     transform: scale(0.95);
 }

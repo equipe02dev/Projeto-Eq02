@@ -16,6 +16,11 @@ body {
     background-color: #f4f4f9;
     background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* Faz o body ocupar toda a tela */
+    margin: 0; /* Remove margens padrão */
 }
 
 /* Estilos do formulário */
@@ -46,40 +51,43 @@ body {
     line-height: 1.5;
 }
 
-.input-group1 {
-    width: 35%; /* Ajuste a largura para um valor menor */
-    padding: 10px; /* Reduz o padding para um espaço menor */
-    margin-bottom: 10px; /* Ajuste o espaçamento entre elementos */
-}
-/* Grupo de checkboxes */
+/* Estiliza o grupo de checkboxes */
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.85);
+    gap: 15px;
+    align-items: center; /* Centraliza os checkboxes */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Caixa de cada checkbox */
+/* Estiliza cada checkbox */
 .input-box {
     display: flex;
-    justify-content: flex-start;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+    font-size: 18px;
 }
 
-.input-box input {
-    transform: scale(1.2);
-}
-.input-box input:focus {
-    outline: 1px solid #134A28
+/* Personaliza os checkboxes */
+.input-box input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #134A28; /* Define a cor do checkbox */
 }
 
+/* Quando o checkbox estiver marcado */
+.input-box input[type="checkbox"]:checked {
+    transform: scale(1.2); /* Aumenta levemente o tamanho ao ser marcado */
+}
+
+/* Ajusta os labels */
 .input-box label {
-    font-size: 16px;
+    cursor: pointer;
     color: #555;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Calendário */
@@ -148,10 +156,34 @@ body {
 }
 
 .date:hover {
-    background-color: #227040;
+    background-color: #134A28;
     color: #fff;
     cursor: pointer;
 }
+
+.continue-button button {
+    background-color: #134A28;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Dá um espaçamento do final da tela */
+}
+
+.continue-button button:hover {
+    background-color: #227040;
+}
+
+/* Remove sublinhado do link */
+.continue-button button a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
