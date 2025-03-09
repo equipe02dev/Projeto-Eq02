@@ -6,29 +6,33 @@
     font-family:  'Inter', sans-serif;
 }
 
-body {
-    width: 170%;
+/* Garante que o body ocupe toda a tela e centralize o conteúdo */
+body, html {
     height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background: #8348B7;
+    background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) 
+        no-repeat center center fixed;
+    background-size: cover; /* Ajusta a imagem ao fundo */
+}
+
+/* Container para centralizar o formulário */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #8348B7;
-    background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) no-repeat center center fixed;
-    background-size: 100%; /* Reduz o tamanho da imagem para 50% */
+    width: 90%; /* Garante largura total */
+    height: 20vh; /* Garante altura total */
 }
 
-
-.container {
-    width:80%;
-    height: 90vh;
-    display: flex;
-
-}
-
+/* Estilização do formulário */
 .form {
     width: 80%;
-    max-width: 800px;
-    min-height: 500px; /* Faz o fundo crescer verticalmente */
+    max-width: 1000px;
+    min-height: 400px; /* Mantém altura mínima */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,16 +112,50 @@ body {
     font-size: 1rem; /* Aumenta o tamanho da fonte */
 }
 
+
+.helper-text {
+    display: none; /* Esconde as mensagens de erro por padrão */
+    color: red;
+    font-size: 14px;
+}
+
+.helper-text.visible {
+    display: block; /* Torna visível quando há erro */
+}
+
+.error-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.error .error-icon {
+    display: inline;
+}
+
+input.error {
+    border: 2px solid red; /* Deixa a borda vermelha */
+    background-color: #ffe6e6; /* Leve tom de vermelho no fundo */
+}
+
+label.error {
+    color: red; /* Deixa o texto do label vermelho para indicar erro */
+}
+
+    
 .input-box input:hover{
     background-color:#eeeeee75;
 }
 
-.input-box input:focus-visible {
+/*.input-box input:focus-visible {
     outline: 1px solid #134A28;
 
-}
+}*/
+
 .continue-button button {
-    width: 35%;
+    width: 105%;
     margin-top: 2.5rem;
     border: none;
     background-color: #134A28;

@@ -44,17 +44,7 @@ h1{
   margin-bottom: 20px;
 }
 
-/* Controles de quantidade */
-.controle-quantidade {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distribui os elementos igualmente */
-  gap: 10px; /* Espaço entre os elementos */
-  background-color: rgba(255, 255, 255, 3px);
-  padding: 10px;
-  border-radius: 8px;
-}
-
+/* Controles de quantidade *
 
 /* Botões de adicionar e subtrair */
 button {
@@ -198,5 +188,39 @@ h3 {
   text-decoration: none;
   display: inline-block; /* Faz o link se comportar como um bloco */
 }
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
+.controle-quantidade button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #134A28;
+  color: white;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.controle-quantidade button:hover {
+  background-color: #227040;
+}
+
+.controle-quantidade input[type="number"] {
+  width: 20px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controle-quantidade input[type="text"] {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="PT-br">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js"defer></script>
     <title>Tela de Login</title>
 </head>
 <body> 
@@ -23,11 +24,13 @@
             <div class="input-box">
                 <label for="email">E-mail</label>
                 <input id="email" type="text" name="email" placeholder="Digite seu E-mail" required>
+                <p id="email-helper" class="helper-text"></p>
             </div>
 
             <div class="input-box">
                 <label for="password">senha</label>
                 <input id="password" type="text" name="password" placeholder="Digite sua senha" required>
+                <p id="password-helper" class="helper-text"></p>
             </div>
     
         </div>

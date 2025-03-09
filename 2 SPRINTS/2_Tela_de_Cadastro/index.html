@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="PT-br">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js"defer></script>
     <title>Tela de cadastro</title>
 </head>
       
@@ -24,36 +25,41 @@
         <div class="input-group">
 
             <div class="input-box">
-                <label for="firstname">Primeiro nome</label>
-                <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                <label for="firstname" id="required-popup">Primeiro nome *</label>
+                <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" > 
+                <p id="firstname-helper" class="helper-text"></p>
+
             </div>
 
             <div class="input-box">
-                <label for="lestname">Sobrenome</label>
-                <input id="lestname" type="text" name="lestname" placeholder="Digite seu Sobrenome" required>
+                <label for="lastname">Sobrenome*</label>
+                <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome">
+                <p id="lastname-helper" class="helper-text">teste</p>
             </div>
 
             <div class="input-box">
-                <label for="email">E-mail</label>
-                <input id="email" type="text" name="email" placeholder="Digite seu primeiro E-mail" required>
+                <label for="email">E-mail*</label>
+                <input id="email" type="text" name="email" placeholder="Digite seu primeiro E-mail">
+                <p id="email-helper " class='helper-text'></p>
             </div>
 
             <div class="input-box">
-                <label for="number">Telefone</label>
-                <input id="number" type="text" name="number" placeholder="(XX) XXXX-XXXX" required>
+                <label for="number">Telefone*</label>
+                <input id="number" type="text" name="number" placeholder="(XX) XXXX-XXXX" >
+                <p id="number-helper " class='helper-text'></p>
             </div>
-
             <div class="input-box">
-                <label for="password">Senha</label>
-                <input id="password" type="text" name="password" placeholder="Digite sua senha" required>
+                <label for="password">Senha*</label>
+                <input id="password" type="password" name="password" placeholder="Digite sua senha">
+                <p id="password-helper" class="helper-text"></p> 
             </div>
             
             <div class="input-box">
-                <label for="confirmpassword">Confirme sua senha</label>
-                <input id="confirmpassword" type="text" name="confirmpassword" placeholder="Confirme a senha" required>
+                <label for="confirm-password">Confirme sua senha*</label> 
+                <input id="confirm-password" type="password" name="confirm-password" placeholder="Confirme a senha">
+                <p id="confirm-password-helper" class="helper-text"></p> 
             </div>
-    
-        </div>
+            
         <div id="termo-compromisso">
             <h3>Termo de Compromisso</h3>
             

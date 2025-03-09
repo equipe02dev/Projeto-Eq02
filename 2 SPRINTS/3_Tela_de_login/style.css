@@ -15,8 +15,9 @@ body {
     align-items: center;
     background: #8348B7;
     background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) no-repeat center center fixed;
-    background-size: 100%; /* Reduz o tamanho da imagem para 50% */
+    background-size: cover; /* Cobrir toda a área sem distorcer */
 }
+
 .form-header{
     margin-bottom: 4rem;
     display: flex;
@@ -27,7 +28,7 @@ body {
 .form {
     width: 80%;
     max-width: 500px;
-    min-height: 500px; /* Faz o fundo crescer verticalmente */
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,16 +38,12 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
-    /* Centraliza a posição da form dentro do body */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.form-header{
+.form-header {
     margin-bottom: 4rem;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     font-size: 24px;
 }
 
@@ -62,19 +59,15 @@ body {
 }
 
 
-.input-box input {
-    width: 100%; /* Faz o input ocupar 100% da largura disponível */
-    height: 4rem; /* Aumenta a altura do input */
-    padding: 1rem 1.5rem; /* Ajusta o preenchimento dentro do input */
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-    margin: 0px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    box-sizing: border-box;
-    resize: none; /* Remove a possibilidade de redimensionamento */
+.input-box input,
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
-
 
 html, body {
     width: 100%;
@@ -84,17 +77,20 @@ html, body {
 }
 
 
-.input-box input:hover {
+/*.input-box input:hover {
     background-color: #eeeeee75;
 }
+
 
 .input-box input:focus-visible {
     outline: 1px solid #134A28;
 }
-.input-box label{
-    font-size: 15px;
-    padding: 1rem;
-}
+    */
+    .input-box label {
+        font-size: 15px;
+        padding: 1rem 0; /* Ajuste o padding */
+        margin-bottom: 8px; /* Adicione margem inferior */
+    }
 
 .continue-button button {
     width: 100%;
@@ -134,3 +130,92 @@ html, body {
         flex-direction: column;
  }
 
+/* Estilo base para o campo de entrada e o rótulo */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo quando o campo está correto */
+input.correct {
+    border-color: #4CAF50; /* Verde */
+}
+
+/* Estilo quando o campo está com erro */
+input.error {
+    border-color: #f44336; /* Vermelho */
+}
+
+label.error {
+    color: #f44336; /* Vermelho */
+}
+
+/* Estilo para a mensagem de ajuda */
+#email-helper {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #f44336; /* Vermelho */
+    display: none; /* Inicialmente oculta */
+}
+
+#email-helper.visible {
+    display: block; /* Exibe a mensagem quando tem erro */
+}
+/* Estilo básico para o campo de senha e rótulo */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o campo de senha quando está correto */
+input.correct {
+    border-color: #4CAF50; /* Verde */
+    background-color: #e8f5e9; /* Verde claro */
+}
+
+/* Estilo para o campo de senha quando há erro */
+input.error {
+    border-color: #f44336; /* Vermelho */
+    background-color: #ffebee; /* Vermelho claro */
+}
+
+/* Estilo para o rótulo quando há erro */
+label.error {
+    color: #f44336; /* Vermelho */
+}
+
+/* Estilo para o helper text */
+#password-helper {
+    display: none;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #f44336; /* Vermelho */
+}
+
+/* Estilo para o helper text quando visível */
+#password-helper.visible {
+    display: block;
+}

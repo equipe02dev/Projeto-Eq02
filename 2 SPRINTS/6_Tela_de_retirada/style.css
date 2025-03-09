@@ -139,3 +139,42 @@ h1{
   h3 {
     margin-top: 20px; /* Ajuste o valor conforme necessário */
 }
+/* Campo com erro (vermelho) */
+/* Estilo para os campos de input */
+input {
+    border: 2px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Quando há erro (borda vermelha) */
+input.error {
+    border-color: #f44336 !important;
+}
+
+/* Quando está correto (borda verde) */
+input.correct {
+    border-color: #4CAF50 !important;
+}
+
+/* Estilo do texto de ajuda */
+.helper-text {
+    display: none;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+/* Quando há erro, o texto fica vermelho */
+.helper-text.error {
+    color: #f44336;
+    display: block;
+}
+
+/* Quando está correto, o texto fica verde */
+.helper-text.correct {
+    color: #4CAF50;
+    display: block;
+}

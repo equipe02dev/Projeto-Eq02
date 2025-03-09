@@ -4,6 +4,7 @@
       <meta charset="PT-br">
       <meta name="viewport" content="width=, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
+      <script src="./script.js"defer></script>
       <title>Tela de Doacao</title>
   </head>
   <body> 
@@ -14,39 +15,37 @@
     <div class="tela_doacao" id="tela_doacao_01">
       <h1> Dados da Doação:</h1>
       <div class="capa"></div>
-
       <div class="controle-quantidade">
-        <button id="btnsubtrairproduto01">-</button>
-        <input id="quantidadeproduto01" type="number" value="1" min="0">
-        <button id="btnadicionarproduto01">+</button>
+        <button class="btn-subtrair">-</button>
+        <input class="quantidade" type="number" value="1" min="0">
+        <button class="btn-adicionar">+</button>
         <h3>Roupas</h3>
-        <input id="description" type="text">
-      </div>
-
-      <div class="controle-quantidade">
-        <button id="btnsubtrairproduto01">-</button>
-        <input id="quantidadeproduto01" type="number" value="1" min="0">
-        <button id="btnadicionarproduto01">+</button>
+        <input class="description" type="text" placeholder="Descrição">
+    </div>
+    
+    <div class="controle-quantidade">
+        <button class="btn-subtrair">-</button>
+        <input class="quantidade" type="number" value="1" min="0">
+        <button class="btn-adicionar">+</button>
         <h3>Higiene pessoal</h3>
-        <input id="description" type="text">
-      </div>
-
-      <div class="controle-quantidade">
-        <button id="btnsubtrairproduto01">-</button>
-        <input id="quantidadeproduto01" type="number" value="1" min="0">
-        <button id="btnadicionarproduto01">+</button>
-        <h3>Alimentos(Não perecíveis)</h3>
-        <input id="description" type="text">
-      </div>
-
-      <div class="controle-quantidade">
-        <button id="btnsubtrairproduto01">-</button>
-        <input id="quantidadeproduto01" type="number" value="1" min="0">
-        <button id="btnadicionarproduto01">+</button>
+        <input class="description" type="text" placeholder="Descrição">
+    </div>
+    
+    <div class="controle-quantidade">
+        <button class="btn-subtrair">-</button>
+        <input class="quantidade" type="number" value="1" min="0">
+        <button class="btn-adicionar">+</button>
+        <h3>Alimentos (Não perecíveis)</h3>
+        <input class="description" type="text" placeholder="Descrição">
+    </div>
+    
+    <div class="controle-quantidade">
+        <button class="btn-subtrair">-</button>
+        <input class="quantidade" type="number" value="1" min="0">
+        <button class="btn-adicionar">+</button>
         <h3>Outros</h3>
-        <input id="description" type="text">
-      </div>
-
+        <input class="description" type="text" placeholder="Descrição">
+    </div>
       <div class="login-button">
         <a href="../7_Data_da_retirada/index.html">
           <button type="button">PRÓXIMO</button>
