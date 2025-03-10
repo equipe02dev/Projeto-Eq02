@@ -1,104 +1,134 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function validarNome(nome) {
-        return nome.length >= 3;
+let firstnameInput = document.getElementById("firstname");
+console.log(firstnameInput);
+let firstnameLbel = document.querySelector('label[for="firstname"]');
+let firstnameHelper = document.getElementById("firstname-helper");
+
+firstnameInput.addEventListener('change',(evento) => {
+   let valor = evento.target.value;
+   console.log(valor); 
+
+    if(valor.length < 3){
+        firstnameInput.classList.add('error');
+        firstnameInput.classList.remove('success');
+        firstnameHelper.classList.add('visible');
+        firstnameHelper.innerText = "O nome deve ter no mínimo 3 caracteres";
+    } else {
+        firstnameInput.classList.remove('error');
+        firstnameInput.classList.add('success');
+        firstnameHelper.classList.remove('visible');
+        firstnameHelper.innerText = "";
     }
-
-    function validarTelefone(telefone) {
-        return telefone.replace(/\D/g, "").length >= 10;
-    }
-
-    function validarSenha(senha) {
-        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-        return regex.test(senha);
-    }
-
-    function adicionarEventoValidacao(input, label, helper, validacao, mensagemErro) {
-        if (input && label && helper) {
-            input.addEventListener("input", (evento) => {
-                let valor = evento.target.value;
-                if (validacao(valor)) {
-                    label.classList.remove("error");
-                    input.classList.remove("error");
-                    input.classList.add("correct");
-                    helper.classList.remove("visible");
-                    helper.innerText = "";
-                } else {
-                    label.classList.add("error");
-                    input.classList.add("error");
-                    input.classList.remove("correct");
-                    helper.classList.add("visible");
-                    helper.innerText = mensagemErro;
-                }
-            });
-        }
-    }
-
-    
-    adicionarEventoValidacao(
-        document.getElementById("firstname"),
-        document.querySelector('label[for="firstname"]'),
-        document.getElementById("firstname-helper"),
-        validarNome,
-        "O nome precisa ter no mínimo 3 caracteres"
-    );
-    
-    adicionarEventoValidacao(
-        document.getElementById("lastname"),
-        document.querySelector('label[for="lastname"]'),
-        document.getElementById("lastname-helper"),
-        validarNome,
-        "O sobrenome precisa ter no mínimo 3 caracteres"
-    );
-    
-    adicionarEventoValidacao(
-        document.getElementById("number"),
-        document.querySelector('label[for="number"]'),
-        document.getElementById("number-helper"),
-        validarTelefone,
-        "Digite um número de telefone válido (mínimo 10 dígitos)"
-    );
-
-    // Função para validar senha e confirmação de senha
-    function validarSenhaCampos() {
-        let passwordInput = document.getElementById("password");
-        let passwordHelper = document.getElementById("password-helper");
-        let confirmPasswordInput = document.getElementById("confirm-password");
-        let confirmPasswordHelper = document.getElementById("confirm-password-helper");
-
-        if (passwordInput && passwordHelper) {
-            passwordInput.addEventListener("input", () => {
-                let valor = passwordInput.value;
-                if (validarSenha(valor)) {
-                    passwordInput.classList.remove("error");
-                    passwordInput.classList.add("correct");
-                    passwordHelper.classList.remove("visible");
-                    passwordHelper.innerText = "";
-                } else {
-                    passwordInput.classList.add("error");
-                    passwordInput.classList.remove("correct");
-                    passwordHelper.classList.add("visible");
-                    passwordHelper.innerText = "A senha deve ter no mínimo 8 caracteres, com uma letra maiúscula, uma minúscula, um número e um caractere especial.";
-                }
-            });
-        }
-
-        if (confirmPasswordInput && confirmPasswordHelper) {
-            confirmPasswordInput.addEventListener("input", () => {
-                if (confirmPasswordInput.value === passwordInput.value) {
-                    confirmPasswordInput.classList.remove("error");
-                    confirmPasswordInput.classList.add("correct");
-                    confirmPasswordHelper.classList.remove("visible");
-                    confirmPasswordHelper.innerText = "";
-                } else {
-                    confirmPasswordInput.classList.add("error");
-                    confirmPasswordInput.classList.remove("correct");
-                    confirmPasswordHelper.classList.add("visible");
-                    confirmPasswordHelper.innerText = "As senhas não coincidem.";
-                }
-            });
-        }
-    }
-
-    
-    validarSenhaCampos();
 });
+
+let lastnameInput = document.getElementById("lastname");
+console.log(lastnameInput);
+let lastnameLabel = document.querySelector('label[for="lastname"]');
+let lastnameHelper = document.getElementById("lastname-helper");
+
+lastnameInput.addEventListener('change',(evento) => {
+   let valor = evento.target.value;
+   console.log(valor); 
+
+    if(valor.length < 3){
+        lastnameInput.classList.add('error');
+        lastnameInput.classList.remove('success');
+        lastnameHelper.classList.add('visible');
+        lastnameHelper.innerText = "O nome deve ter no mínimo 3 caracteres";
+    } else {
+        lastnameInput.classList.remove('error');
+        lastnameInput.classList.add('success');
+        lastnameHelper.classList.remove('visible');
+        lastnameHelper.innerText = "";
+    }
+});
+
+let emailInput = document.getElementById("email");
+let emailHelper = document.getElementById("email-helper");
+
+// Use o evento 'input' para validar enquanto o usuário digita
+emailInput.addEventListener('input', (evento) => {
+    let valor = evento.target.value;
+    console.log(valor);
+
+    // Verifica se o e-mail NÃO contém "@" ou ".com"
+    if (!valor.includes('@') || !valor.includes('.com')) {
+        emailInput.classList.add('error');
+        emailInput.classList.remove('success');
+        emailHelper.classList.add('visible');
+        emailHelper.innerText = "O email deve conter @ e .com";
+    } else {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('success');
+        emailHelper.classList.remove('visible');
+        emailHelper.innerText = "";
+    }
+});
+
+let numberInput = document.getElementById("number");
+console.log(numberInput);
+let numberLabel = document.querySelector('label[for="number"]');
+let numberHelper = document.getElementById("number-helper");
+
+numberInput.addEventListener('change',(evento) => {
+   let valor = evento.target.value;
+   console.log(valor); 
+
+    if(valor.length < 11){
+        numberInput.classList.add('error');
+        numberInput.classList.remove('success');
+        numberHelper.classList.add('visible');
+        numberHelper.innerText = "O nome deve ter no mínimo 3 caracteres";
+    } else {
+        numberInput.classList.remove('error');
+        numberInput.classList.add('success');
+        numberHelper.classList.remove('visible');
+        
+    }
+});
+
+let passwordInput = document.getElementById("password");
+let confirmPasswordInput = document.getElementById("confirm-password");
+let passwordHelper = document.getElementById("password-helper");
+let confirmPasswordHelper = document.getElementById("confirm-password-helper");
+
+function validarSenha() {
+    let senha = passwordInput.value;
+    
+    if (senha.length < 8) {
+        passwordInput.classList.add("error");
+        passwordInput.classList.remove("success");
+        passwordHelper.classList.add("visible");
+        passwordHelper.innerText = "A senha deve ter no mínimo 8 caracteres";
+    } else {
+        passwordInput.classList.remove("error");
+        passwordInput.classList.add("success");
+        passwordHelper.classList.remove("visible");
+        passwordHelper.innerText = "";
+    }
+}
+
+function confirmarSenha() {
+    let senha = passwordInput.value;
+    let confirmacao = confirmPasswordInput.value;
+
+    if (confirmacao === "") {
+        confirmPasswordHelper.classList.remove("visible");
+        confirmPasswordInput.classList.remove("error", "success");
+    } else if (senha !== confirmacao) {
+        confirmPasswordInput.classList.add("error");
+        confirmPasswordInput.classList.remove("success");
+        confirmPasswordHelper.classList.add("visible");
+        confirmPasswordHelper.innerText = "As senhas não coincidem!";
+    } else {
+        confirmPasswordInput.classList.remove("error");
+        confirmPasswordInput.classList.add("success");
+        confirmPasswordHelper.classList.remove("visible");
+        confirmPasswordHelper.innerText = "";
+    }
+}
+
+passwordInput.addEventListener("change", validarSenha);
+confirmPasswordInput.addEventListener("input", confirmarSenha);
+
+
+

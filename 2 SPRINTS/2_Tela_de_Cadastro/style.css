@@ -112,48 +112,6 @@ body, html {
     font-size: 1rem; /* Aumenta o tamanho da fonte */
 }
 
-
-.helper-text {
-    display: none; /* Esconde as mensagens de erro por padrão */
-    color: red;
-    font-size: 14px;
-}
-
-.helper-text.visible {
-    display: block; /* Torna visível quando há erro */
-}
-
-.error-icon {
-    display: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-.error .error-icon {
-    display: inline;
-}
-
-input.error {
-    border: 2px solid red; /* Deixa a borda vermelha */
-    background-color: #ffe6e6; /* Leve tom de vermelho no fundo */
-}
-
-label.error {
-    color: red; /* Deixa o texto do label vermelho para indicar erro */
-}
-
-    
-.input-box input:hover{
-    background-color:#eeeeee75;
-}
-
-/*.input-box input:focus-visible {
-    outline: 1px solid #134A28;
-
-}*/
-
 .continue-button button {
     width: 105%;
     margin-top: 2.5rem;
@@ -207,4 +165,49 @@ label.error {
 
 .termos-checkbox input[type="checkbox"] {
     margin-right: 10px;  /* Espaço entre o checkbox e o texto */
+}
+
+/*///////////////////////////////*/
+
+/* Style for the input field when it has an error */
+.error {
+    border: 2px solid red; /* Add a red border to indicate an error */
+    background-color: #ffe6e6; /* Light red background to highlight the error */
+}
+
+/* Style for the helper text when it is visible */
+.visible {
+    display: block; /* Make the helper text visible */
+    color: red; /* Red text color for the error message */
+    font-size: 0.875rem; /* Smaller font size for the helper text */
+    margin-top: 0.25rem; /* Add some space between the input and the helper text */
+}
+
+.success{
+    color:green 
+}
+
+input.error {
+    border: 2px solid red; /* Borda vermelha */
+    background-color: #ffe6e6; /* Fundo vermelho claro */
+    color: red; /* Texto vermelho (opcional) */
+}
+
+input.success {
+    border: 2px solid green; /* Borda verde */
+    background-color: #e6ffe6; /* Fundo verde claro */
+    color: green; /* Texto verde (opcional) */
+}
+
+/* Estilo padrão para o texto de ajuda */
+#email-helper {
+    display: none; /* Oculta o texto de ajuda por padrão */
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilo para o texto de ajuda quando visível */
+#email-helper.visible {
+    display: block; /* Exibe o texto de ajuda */
 }

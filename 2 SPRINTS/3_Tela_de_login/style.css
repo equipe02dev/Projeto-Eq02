@@ -130,92 +130,44 @@ html, body {
         flex-direction: column;
  }
 
-/* Estilo base para o campo de entrada e o rótulo */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+.error {
+    border: 2px solid red; /* Add a red border to indicate an error */
+    background-color: #ffe6e6; /* Light red background to highlight the error */
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+/* Style for the helper text when it is visible */
+.visible {
+    display: block; /* Make the helper text visible */
+    color: red; /* Red text color for the error message */
+    font-size: 0.875rem; /* Smaller font size for the helper text */
+    margin-top: 0.25rem; /* Add some space between the input and the helper text */
 }
 
-/* Estilo quando o campo está correto */
-input.correct {
-    border-color: #4CAF50; /* Verde */
+.success{
+    color:green 
 }
 
-/* Estilo quando o campo está com erro */
 input.error {
-    border-color: #f44336; /* Vermelho */
+    border: 2px solid red; /* Borda vermelha */
+    background-color: #ffe6e6; /* Fundo vermelho claro */
+    color: red; /* Texto vermelho (opcional) */
 }
 
-label.error {
-    color: #f44336; /* Vermelho */
+input.success {
+    border: 2px solid green; /* Borda verde */
+    background-color: #e6ffe6; /* Fundo verde claro */
+    color: green; /* Texto verde (opcional) */
 }
 
-/* Estilo para a mensagem de ajuda */
+/* Estilo padrão para o texto de ajuda */
 #email-helper {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #f44336; /* Vermelho */
-    display: none; /* Inicialmente oculta */
+    display: none; /* Oculta o texto de ajuda por padrão */
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }
 
+/* Estilo para o texto de ajuda quando visível */
 #email-helper.visible {
-    display: block; /* Exibe a mensagem quando tem erro */
-}
-/* Estilo básico para o campo de senha e rótulo */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-/* Estilo para o campo de senha quando está correto */
-input.correct {
-    border-color: #4CAF50; /* Verde */
-    background-color: #e8f5e9; /* Verde claro */
-}
-
-/* Estilo para o campo de senha quando há erro */
-input.error {
-    border-color: #f44336; /* Vermelho */
-    background-color: #ffebee; /* Vermelho claro */
-}
-
-/* Estilo para o rótulo quando há erro */
-label.error {
-    color: #f44336; /* Vermelho */
-}
-
-/* Estilo para o helper text */
-#password-helper {
-    display: none;
-    margin-top: 4px;
-    font-size: 14px;
-    color: #f44336; /* Vermelho */
-}
-
-/* Estilo para o helper text quando visível */
-#password-helper.visible {
-    display: block;
+    display: block; /* Exibe o texto de ajuda */
 }

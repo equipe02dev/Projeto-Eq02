@@ -140,41 +140,46 @@ h1{
     margin-top: 20px; /* Ajuste o valor conforme necessário */
 }
 /* Campo com erro (vermelho) */
-/* Estilo para os campos de input */
-input {
-    border: 2px solid #ccc;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease-in-out;
+
+/* Style for the input field when it has an error */
+.error {
+    border: 2px solid red; /* Add a red border to indicate an error */
+    background-color: #ffe6e6; /* Light red background to highlight the error */
 }
 
-/* Quando há erro (borda vermelha) */
+/* Style for the helper text when it is visible */
+.visible {
+    display: block; /* Make the helper text visible */
+    color: red; /* Red text color for the error message */
+    font-size: 0.875rem; /* Smaller font size for the helper text */
+    margin-top: 0.25rem; /* Add some space between the input and the helper text */
+}
+
+.success{
+    color:green 
+}
+
 input.error {
-    border-color: #f44336 !important;
+    border: 2px solid red; /* Borda vermelha */
+    background-color: #ffe6e6; /* Fundo vermelho claro */
+    color: red; /* Texto vermelho (opcional) */
 }
 
-/* Quando está correto (borda verde) */
-input.correct {
-    border-color: #4CAF50 !important;
+input.success {
+    border: 2px solid green; /* Borda verde */
+    background-color: #e6ffe6; /* Fundo verde claro */
+    color: green; /* Texto verde (opcional) */
 }
 
-/* Estilo do texto de ajuda */
-.helper-text {
-    display: none;
+/* Estilo padrão para o texto de ajuda */
+#email-helper {
+    display: none; /* Oculta o texto de ajuda por padrão */
+    color: red;
     font-size: 0.875rem;
-    margin-top: 4px;
+    margin-top: 0.25rem;
 }
 
-/* Quando há erro, o texto fica vermelho */
-.helper-text.error {
-    color: #f44336;
-    display: block;
-}
-
-/* Quando está correto, o texto fica verde */
-.helper-text.correct {
-    color: #4CAF50;
-    display: block;
+/* Estilo para o texto de ajuda quando visível */
+#email-helper.visible {
+    display: block; /* Exibe o texto de ajuda */
 }
