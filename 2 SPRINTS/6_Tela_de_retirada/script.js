@@ -1,96 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // ================================
-    // Validação do CEP
-    // ================================
-    const cepInput = document.getElementById("cep");
-    const cepHelper = document.getElementById("cep-helper");
+let cepInput = document.getElementById("cep");
+let cepLabel = document.querySelector('label[for="cep"]');
+let cepHelper = document.getElementById("cep-helper");
 
-    function validarCEP(cep) {
-        return /^\d{8}$/.test(cep); // CEP deve ter exatamente 8 dígitos numéricos
-    }
+cepInput.addEventListener('change', (evento) => {
+   let valor = evento.target.value;
+   console.log(valor); 
 
-    cepInput.addEventListener("input", function () {
-        cepInput.value = cepInput.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+   // Remove espaços e hífens
+   let valorLimpo = valor.replace(/[^\d]/g, '');
 
-        if (validarCEP(cepInput.value)) {
-            cepInput.classList.remove("error");
-            cepInput.classList.add("correct");
-            cepHelper.classList.remove("error");
-            cepHelper.classList.add("correct");
-            cepHelper.innerText = "CEP válido.";
-        } else {
-            cepInput.classList.add("error");
-            cepInput.classList.remove("correct");
-            cepHelper.classList.add("error");
-            cepHelper.classList.remove("correct");
-            cepHelper.innerText = "CEP inválido. Digite exatamente 8 números.";
-        }
-    });
+   // Verifica se o CEP tem exatamente 8 dígitos
+   if (valorLimpo.length !== 8) {
+        cepInput.classList.add('error');
+        cepInput.classList.remove('success');
+        cepHelper.classList.add('visible');
+        cepHelper.innerText = "O CEP deve ter exatamente 8 dígitos numéricos";
+   } else {
+        cepInput.classList.remove('error');
+        cepInput.classList.add('success');
+        cepHelper.classList.remove('visible');
+        cepHelper.innerText = "";
+   }
+});
 
-    // ================================
-    // Validação do Número
-    // ================================
-    const numeroInput = document.getElementById("numero");
-    const numeroHelper = document.getElementById("numero-helper");
 
-    // Bloquear caracteres não numéricos
-    numeroInput.addEventListener("keydown", function (event) {
-        if (!/\d/.test(event.key) && event.key !== "Backspace" && event.key !== "Tab") {
-            event.preventDefault();
-        }
-    });
+let numeroInput = document.getElementById("numero");
+let numeroLabel = document.querySelector('label[for="numero"]');
+let numeroHelper = document.getElementById("numero-helper");
 
-    function validarNumero(numero) {
-        return /^\d+$/.test(numero); // Apenas números
-    }
+numeroInput.addEventListener('change', (evento) => {
+   let valor = evento.target.value;
+   console.log(valor);
 
-    numeroInput.addEventListener("input", function () {
-        numeroInput.value = numeroInput.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+   // Remove qualquer coisa que não seja número
+   let valorNumerico = valor.replace(/\D/g, ''); // Remove qualquer coisa que não seja número
 
-        if (validarNumero(numeroInput.value) && numeroInput.value.length > 0) {
-            numeroInput.classList.remove("error");
-            numeroInput.classList.add("correct");
-            numeroHelper.classList.remove("error");
-            numeroHelper.classList.add("correct");
-            numeroHelper.innerText = "Número válido.";
-        } else {
-            numeroInput.classList.add("error");
-            numeroInput.classList.remove("correct");
-            numeroHelper.classList.add("error");
-            numeroHelper.classList.remove("correct");
-            numeroHelper.innerText = "Número inválido. Digite apenas números.";
-        }
-    });
-
-    // ================================
-    // Impedir envio do formulário com erro
-    // ================================
-    const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", function (event) {
-            let erro = false;
-
-            if (!validarNumero(numeroInput.value) || numeroInput.value.length === 0) {
-                erro = true;
-                numeroInput.classList.add("error");
-                numeroInput.classList.remove("correct");
-                numeroHelper.classList.add("error");
-                numeroHelper.classList.remove("correct");
-                numeroHelper.innerText = "Número inválido. Digite apenas números.";
-            }
-
-            if (!validarCEP(cepInput.value)) {
-                erro = true;
-                cepInput.classList.add("error");
-                cepInput.classList.remove("correct");
-                cepHelper.classList.add("error");
-                cepHelper.classList.remove("correct");
-                cepHelper.innerText = "CEP inválido. Digite exatamente 8 números.";
-            }
-
-            if (erro) {
-                event.preventDefault();
-            }
-        });
-    }
+   // Verifica se o número tem pelo menos 1 caractere
+   if (valorNumerico.length < 1) {
+        numeroInput.classList.add('error');
+        numeroInput.classList.remove('success');
+        numeroHelper.classList.add('visible');
+        numeroHelper.innerText = "Digite o número da sua residência.";
+   } else {
+        numeroInput.classList.remove('error');
+        numeroInput.classList.add('success');
+        numeroHelper.classList.remove('visible');
+        numeroHelper.innerText = "";
+   }
 });

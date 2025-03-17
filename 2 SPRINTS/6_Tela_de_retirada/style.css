@@ -171,15 +171,3 @@ input.success {
     color: green; /* Texto verde (opcional) */
 }
 
-/* Estilo padrão para o texto de ajuda */
-#email-helper {
-    display: none; /* Oculta o texto de ajuda por padrão */
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-}
-
-/* Estilo para o texto de ajuda quando visível */
-#email-helper.visible {
-    display: block; /* Exibe o texto de ajuda */
-}
