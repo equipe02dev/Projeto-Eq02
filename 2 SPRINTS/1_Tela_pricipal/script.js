@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Adicionar interatividade aos itens de serviço
     const serviceItems = document.querySelectorAll(".service1");
 
     serviceItems.forEach(item => {
