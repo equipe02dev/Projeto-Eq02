@@ -126,7 +126,7 @@ body {
 /* ====== Botão "Agendar" ====== */
 .login-button button {
     height: 40px; /* Mesma altura do input */
-    padding: 0 20px; /* Ajuste de espaçamento interno */
+    padding: 0 80px; /* Ajuste de espaçamento interno */
     display: flex;
     align-items: center;
     justify-content: center;
