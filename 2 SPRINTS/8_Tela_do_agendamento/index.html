@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Detalhes do Agendamento</title>
 </head>
 <body>
     <section class="confirmacao-agendamento">
@@ -13,22 +13,22 @@
         <div class="detalhes-container">
             <div class="detalhes-item">
                 <span><strong>Nome</strong></span>
-                <span id="nome-agendado">Gabriel Philipe</span>
+                <span id="firstname"></span>
             </div>
             
             <div class="detalhes-item">
                 <span><strong>Data do Agendamento</strong></span>
-                <span id="data-agendada">26/01/2025</span>
+                <span id="data-agendada"></span>
             </div>
             
             <div class="detalhes-item">
                 <span><strong>Horário</strong></span>
-                <span id="hora-agendada">11:00 as 13:00</span>
+                <span id="hora-agendada"></span>
             </div>
             
             <div class="detalhes-item">
                 <span><strong>Comentários</strong></span>
-                <span id="comentarios-agendado">Entrega de roupas e alimentos.</span>
+                <span id="description"></span>
             </div>
         </div>
         
@@ -39,7 +39,13 @@
         </div>
         
     </section>
-    
-    
+
+    <script>
+        // Quando a página de confirmação é carregada, recupera os dados do localStorage
+        document.getElementById('firstname').textContent = localStorage.getItem('firstname');
+        document.getElementById('data-agendada').textContent = localStorage.getItem('data');
+        document.getElementById('hora-agendada').textContent = localStorage.getItem('hora');
+        document.getElementById('description').textContent = localStorage.getItem('description');
+    </script>
 </body>
 </html>

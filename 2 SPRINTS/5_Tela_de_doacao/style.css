@@ -154,7 +154,6 @@ h3 {
 }
 /* Ajuste do container do botão */
 .login-button {
-
   justify-content: center; /* Centraliza o botão */
   margin-top: 20px; /* Espaçamento superior */
 }
@@ -188,6 +187,24 @@ h3 {
   text-decoration: none;
   display: inline-block; /* Faz o link se comportar como um bloco */
 }
+
+.btn-next {
+  background-color: #134A28; /* Cor de fundo */
+}
+
+.btn-next:hover {
+  background-color: #227040; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o botão "VOLTAR" */
+.btn-back {
+  background-color: #134A28; /* Cor de fundo */
+}
+
+.btn-back:hover {
+  background-color: #227040; /* Cor de fundo ao passar o mouse */
+}
+
 .controle-quantidade {
   display: flex;
   align-items: center;
@@ -242,4 +259,67 @@ h3 {
 .description::placeholder {
   color: #999; /* Cor do texto do placeholder */
   font-style: italic; /* Estilo do texto do placeholder */
+}
+/* Container para alinhar os botões */
+/* Container para alinhar os botões à esquerda */
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões à esquerda */
+  align-items: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilização geral dos botões */
+.button-container button {
+  width: 150px; /* Largura fixa */
+  padding: 12px 24px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  color: white !important; /* Cor do texto branca */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona leve arredondamento */
+  cursor: pointer; /* Efeito de clique */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+/* Garantindo que os links dentro dos botões tenham a cor branca */
+.button-container a {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Se o link estiver dentro do botão */
+.button-container button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 24px;
+  color: white !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Botão VOLTAR */
+.btn-back {
+  background-color: #134A28; /* Cinza */
+}
+
+.btn-back:hover {
+  background-color: #227040;
+}
+
+/* Botão PRÓXIMO */
+.btn-next {
+  background-color: #134A28; /* Verde escuro */
+}
+
+.btn-next:hover {
+  background-color: #227040;
+}
+
+/* Efeito ao clicar */
+.button-container button:active {
+  transform: scale(0.95);
 }

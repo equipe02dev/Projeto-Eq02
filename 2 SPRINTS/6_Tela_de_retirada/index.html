@@ -1,62 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="PT-br">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"defer></script>
+    <script src="./script.js" defer></script>
     <title>Tela de Retirada</title>
 </head>
-<body> 
+<body>
     <div class="container">
-        <div class="form-image">
-        </div>
-
-    <div class="form">
-        <form action="#">
-            <div class="form-header">
-                <div class="title">
-                    <h1>Dados do Local da Retirada:</Cadastre-se></h1>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Dados do Local da Retirada:</h1>
+                    </div>
                 </div>
-     </div>
-        
-        <div class="input-group">
 
-            <div class="input-box">
-                <label for="cep">CEP*:</label>
-                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required>
-                <p id="cep-helper" class="helper-text"></p>
-            </div>
-            
+                <!-- Input de CEP -->
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="cep">CEP*:</label>
+                        <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="9">
+                        <p id="cep-helper" class="helper-text"></p>
+                    </div>
+                    
+                    <div class="continue-button">
+                        <button type="button" id="buscar-cep">BUSCAR CEP</button>
+                    </div>
+                    
+                    <!-- Área para exibir os resultados -->
+                    <div id="resultado-cep" class="resultado-cep">
+                        <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+                        <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+                        <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+                        <p><strong>Estado:</strong> <span id="estado"></span></p>
+                    </div>
+                </div>
 
-            <div class="continue-button"> 
-                <button><a href="#">BUSCAR CEP</a></button>
-            </div>
-
-
-            <form>
+                <!-- Input de Número -->
                 <div class="input-box">
-                    <label for="numero">Número:*</label>
+                    <label for="numero">Número*:</label>
                     <input id="numero" type="text" name="numero" placeholder="Digite seu número" required>
                     <p id="numero-helper" class="helper-text"></p>
                 </div>
-            </form>
-            
-            <div class="input-box">
-                <label for="complemento">Complemento:</label>
-                <input id="complemento" type="text" name="complemento" placeholder="Digite o complemento" required>
-                <p id="complemento-helper" class="helper-text"></p>
-            </div>
-            
-            
-            <div class="continue-button"> 
-                <button><a href="../5_Tela_de_doacao/">PRÓXIMO</a></button>
-            </div>
-        </div>
-        
-        </form>
-    </div>
-</div>
 
+                <!-- Input de Complemento -->
+                <div class="input-box">
+                    <label for="complemento">Complemento:</label>
+                    <input id="complemento" type="text" name="complemento" placeholder="Digite o complemento">
+                    <p id="complemento-helper" class="helper-text"></p>
+                </div>
+
+                <!-- Botões -->
+                <div class="continue-button">
+                    <button id="back-btn"><a href="../1_Tela_pricipal/">VOLTAR</a></button>
+                    <button><a href="../5_Tela_de_doacao/">PRÓXIMO</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

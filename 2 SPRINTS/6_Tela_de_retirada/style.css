@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:  'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -17,45 +18,38 @@ body {
     background-size: cover;
 }
 
-h1{
-    font-size: 28px;
-  }
-
 .container {
-    width: 50%;
-    height: 90vh;
+    width: 100%;
+    max-width: 720px; /* Limita a largura para telas maiores */
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    justify-content: flex-start; /* Mantém os itens no topo */
-    padding-left: 20px; /* Dá um pequeno espaçamento da borda esquerda */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-
 
 .form {
     width: 100%;
-    max-width: 900px;
-    min-height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha os itens dentro do formulário à esquerda */
+    max-width: 720px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px 0; /* Remove margens laterais */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-.form-header{
-    margin-bottom: 2rem;
+.form-header {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     font-size: 20px;
+    margin-bottom: 2rem;
 }
 
-.form-header h1::after{
-    content:'';
+.form-header h1 {
+    margin: 0;
+}
+
+.form-header h1::after {
+    content: '';
     display: block;
     width: 5rem;
     height: 0.3rem;
@@ -65,54 +59,57 @@ h1{
     border-radius: 10px;
 }
 
-.input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
+.input-group {
+    margin-bottom: 1.5rem;
 }
 
+.input-box {
+    margin-bottom: 1.5rem;
+}
+
+.input-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
 
 .input-box input {
-    width: 100%; /* Faz o input ocupar toda a largura disponível */
-    max-width: 500px;
-    height: 2.5rem; /* Aumenta a altura do input */
+    width: 50%;
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
-    margin: 5px 0; /* Ajusta o espaçamento */
-}
-
-.input-box input:hover{
-    background-color:#eeeeee75;
+    box-sizing: border-box;
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #134A28;
-
+    outline: 2px solid #134A28;
 }
+
+.helper-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
 .continue-button {
-    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%; /* Certifica que os botões ocupam a largura completa */
 }
 
 .continue-button button {
-    width: 15%;
-    margin-top: 1rem;
-    border: none;
-    background-color: #134A28;
-    padding: 0.62rem;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 20px;
-}
-
-.continue-button button {
-    width: auto;
-    margin-top: 1rem;
-    border: none;
-    background-color: #134A28;
     padding: 10px 20px;
+    font-size: 16px;
+    background-color: #134A28;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%; /* Botões ocupam quase metade da largura cada */
 }
 
 .continue-button button:hover {
@@ -121,53 +118,50 @@ h1{
 
 .continue-button button a {
     text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
+    color: white;
 }
 
-/* Container do grupo de inputs */
-.input-group {
-    display: flex;
-    flex-direction: column; /* Organiza os inputs em coluna */
-    gap: 0px; /* Espaçamento entre os elementos */
-    width: 100%;
-    max-width: 900px; /* Define um tamanho máximo */
-    margin: 20px auto; /* Centraliza e dá um espaçamento superior */
-    padding: 30px;
-  }
-  h3 {
-    margin-top: 20px; /* Ajuste o valor conforme necessário */
-}
-/* Campo com erro (vermelho) */
-
-/* Style for the input field when it has an error */
-.error {
-    border: 2px solid red; /* Add a red border to indicate an error */
-    background-color: #ffe6e6; /* Light red background to highlight the error */
+.resultado-cep {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
 }
 
-/* Style for the helper text when it is visible */
-.visible {
-    display: block; /* Make the helper text visible */
-    color: red; /* Red text color for the error message */
-    font-size: 0.875rem; /* Smaller font size for the helper text */
-    margin-top: 0.25rem; /* Add some space between the input and the helper text */
+.resultado-cep p {
+    margin: 5px 0;
+    color: #333;
 }
 
-.success{
-    color:green 
-}
+/* Responsividade */
+@media screen and (max-width: 720px) {
+    .form {
+        padding: 1rem;
+    }
 
-input.error {
-    border: 2px solid red; /* Borda vermelha */
-    background-color: #ffe6e6; /* Fundo vermelho claro */
-    color: red; /* Texto vermelho (opcional) */
-}
+    .form-header h1 {
+        font-size: 18px;
+    }
 
-input.success {
-    border: 2px solid green; /* Borda verde */
-    background-color: #e6ffe6; /* Fundo verde claro */
-    color: green; /* Texto verde (opcional) */
-}
+    .input-box input {
+        font-size: 14px;
+        padding: 10px;
+    }
 
+    .continue-button {
+        flex-direction: column; /* Botões ficam empilhados em telas pequenas */
+    }
+
+    .continue-button button {
+        padding: 8px 16px;
+        font-size: 14px;
+        width: 100%; /* Botões ocupam toda a largura na tela pequena */
+        margin-top: 10px;
+    }
+
+    .continue-button button:nth-child(2) {
+        margin-top: 0;
+    }
+}
