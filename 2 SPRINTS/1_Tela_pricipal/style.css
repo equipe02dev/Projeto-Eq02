@@ -499,3 +499,30 @@ footer {
 #footer_copyright a:hover {
     text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
+
+.pix-solidario {
+    text-align: center;
+    padding: 5px; /* Reduzido */
+    border-radius: 4px; /* Reduzido */
+    
+}
+
+.pix-solidario p {
+    font-size: 18px; /* Reduzido */
+    color: #134A28;  /* Cor verde para manter a identidade visual */
+    margin-bottom: 8px; /* Reduzido */
+}
+
+.pix-solidario .qrcode {
+    width: 80px; /* Reduzido */
+    height: auto;
+    margin: 2px auto; /* Reduzido */
+    display: block;
+}
+.pix-solidario h4 {
+    font-size: 26px;  /* Aumenta o tamanho da fonte do h4 */
+    color: #134A28;  /* Cor verde para manter a identidade visual */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    margin-bottom: 15px;  /* Espaçamento inferior */
+}
+
