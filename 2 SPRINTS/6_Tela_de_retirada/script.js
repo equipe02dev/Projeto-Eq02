@@ -48,3 +48,39 @@ numeroInput.addEventListener('change', (evento) => {
         numeroHelper.innerText = "";
    }
 });
+
+function buscarCEP() {
+     // Obtém o valor do CEP digitado pelo usuário
+     var cep = document.getElementById('cep').value.replace(/\D/g, ''); // Remove caracteres não numéricos
+     var resultado = document.getElementById('resultado');
+ 
+     // Valida se o CEP tem 8 dígitos
+     if (cep.length !== 8 || isNaN(cep)) {
+         resultado.innerHTML = '<p style="color: red;">CEP inválido! Digite um CEP com 8 números.</p>';
+         return; // Interrompe a execução da função
+     }
+ 
+     // Faz a requisição à API do ViaCEP
+     fetch(`https://viacep.com.br/ws/${cep}/json/`)
+         .then(response => response.json()) // Converte a resposta para JSON
+         .then(data => {
+             // Verifica se o CEP foi encontrado
+             if (data.erro) {
+                 resultado.innerHTML = '<p style="color: red;">CEP não encontrado.</p>';
+             } else {
+                 // Exibe os dados do endereço
+                 resultado.innerHTML = `
+                     <p><strong>CEP:</strong> ${data.cep}</p>
+                     <p><strong>Logradouro:</strong> ${data.logradouro}</p>
+                     <p><strong>Bairro:</strong> ${data.bairro}</p>
+                     <p><strong>Cidade:</strong> ${data.localidade}</p>
+                     <p><strong>Estado:</strong> ${data.uf}</p>
+                 `;
+             }
+         })
+         .catch(error => {
+             // Exibe uma mensagem de erro em caso de falha na requisição
+             resultado.innerHTML = '<p style="color: red;">Erro ao buscar o CEP.</p>';
+             console.error('Erro:', error);
+         });
+ }

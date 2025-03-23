@@ -224,3 +224,22 @@ h3 {
   border-radius: 5px;
 }
 
+.description {
+  width: 100%; /* Largura total do campo */
+  padding: 10px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: 1px solid #ccc; /* Borda sólida cinza */
+  border-radius: 5px; /* Cantos arredondados */
+  outline: none; /* Remove o contorno ao focar */
+  transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+}
+
+.description:focus {
+  border-color: #007bff; /* Cor da borda ao focar (azul) */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+}
+
+.description::placeholder {
+  color: #999; /* Cor do texto do placeholder */
+  font-style: italic; /* Estilo do texto do placeholder */
+}

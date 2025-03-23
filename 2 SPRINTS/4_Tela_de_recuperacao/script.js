@@ -19,3 +19,9 @@ emailInput.addEventListener('input', (evento) => {
         emailHelper.innerText = "";
     }
 });
+
+cepInput.addEventListener('input', () => {
+    let cep = cepInput.value.replace(/\D/g, ''); // Remove tudo que não é número
+    cep = cep.replace(/^(\d{5})(\d)/, '$1-$2'); // Adiciona o hífen após os 5 primeiros dígitos
+    cepInput.value = cep;
+});
