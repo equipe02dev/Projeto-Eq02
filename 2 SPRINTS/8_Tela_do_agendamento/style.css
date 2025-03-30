@@ -73,3 +73,115 @@ body {
 .botao-voltar button:active {
     transform: scale(0.95);
 }
+@media (min-width: 768px) {
+    body {
+        background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
+    }
+    
+    .container1 {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    
+    .testeimag2 {
+        width: 15%;
+    }
+    
+    .painel_doacao {
+        max-width: 600px;
+        padding: 20px;
+    }
+    
+    .service-container {
+        margin-top: 200px;
+    }
+    
+    .service1 {
+        width: 30%;
+    }
+    
+    main, .main1 {
+        margin: 50px;
+        padding: 50px;
+    }
+    
+    .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .espaco1, .espaco2, .espaco3 {
+        width: 45%;
+    }
+    
+    #footer_content {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    #input_group {
+        flex-direction: row;
+    }
+}
+
+/* Telas grandes (acima de 1024px) */
+@media (min-width: 1024px) {
+    .service1 {
+        width: 220px;
+    }
+    
+    .espaco1, .espaco2, .espaco3 {
+        max-width: 500px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        padding: 8px 15px;
+    }
+}
+
+/* Telas muito grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    body {
+        background-size: cover;
+    }
+    
+    .service-container {
+        gap: 60px;
+    }
+    
+    main, .main1 {
+        margin: 100px;
+        padding: 80px;
+    }
+}
+
+/* Ajustes para telas muito pequenas (abaixo de 360px) */
+@media (max-width: 360px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .painel_doacao {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    main, .main1 {
+        margin: 10px;
+        padding: 15px;
+    }
+}
