@@ -5,16 +5,17 @@
 
 body {
     background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
-    background-color: #8348B7;
-    background-size: 1378px 728px;
-    background-repeat: no-repeat;
-    background-position: top center; /* Coloca a imagem no topo */
+    background-color: #8348B7; /* Mantém a cor de fundo no restante da página */
+    background-size: 100% auto; /* Largura total, altura automática */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-position: top center; /* Mantém a imagem no topo */
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    padding-top: 0;
-    position: relative; /* Garante que o fundo seja exibido atrás do conteúdo */
+    position: relative; /* Mantém o fundo atrás do conteúdo */
+    height: 100vh; /* Define a altura total da tela para evitar cortes */
 }
+
 
 .services {
     position: relative; /* Faz com que os outros elementos fiquem acima do fundo */
@@ -74,12 +75,15 @@ body {
 }
 
 
-.testeimag2{
+.testeimag2 {
     mix-blend-mode: darken;
-    width: 15%;
+    width: 12%; /* Ajuste a largura para 10% ou o valor que desejar */
+    height: auto; /* Mantém a proporção da imagem */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* ====== Estilização do Painel de Doação ====== */
 .painel_doacao {
     background-color: rgba(255, 255, 255, 0.85);
@@ -175,7 +179,7 @@ body {
     justify-content: center;
     gap: 60px;
     flex-wrap: wrap;
-    margin-top: 150px; /* Ajuste esse valor para descer mais */
+    margin-top: 240px; /* Ajuste esse valor para descer mais */
 }
 
 .service1 {
@@ -189,7 +193,7 @@ body {
 
 .service1 h2 {
     position: absolute;
-    top: -23px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(5, 39, 1);
@@ -525,4 +529,124 @@ footer {
     font-weight: bold;  /* Deixa o texto em negrito */
     margin-bottom: 15px;  /* Espaçamento inferior */
 }
+/* Importação da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
+    background-color: #8348B7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.container1 {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgb(167, 88, 241);
+}
+
+.painel_doacao {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.login-button button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #134A28;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button button:hover {
+    background-color: #227040;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    body {
+        background-size: contain;
+    }
+    .container1 {
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .painel_doacao {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .painel_doacao {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .painel_doacao {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .login-button button {
+        font-size: 14px;
+    }
+}

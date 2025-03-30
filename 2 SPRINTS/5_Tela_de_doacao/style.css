@@ -1,17 +1,15 @@
 /* Estilização geral */
 body {
-  background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
-  background-color: #8348B7;
-  background-size: 1378px 698px;
-  font-family: Arial, sans-serif;
-  background-color: #f201fa;
-  margin: 0;
-  padding:30px;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  background: #8348B7;
+  background: url(./img/Brown\ Illustrative\ International\ Youth\ Day\ Instagram\ Post\ \(1\)\ 1.png) no-repeat center center fixed;
+  background-size: cover;
 }
+
 
 .tela_doacao h1::after{
   content:'';
@@ -324,46 +322,33 @@ h3 {
   transform: scale(0.95);
 }
 
-/* Estilos para telas menores, como celulares */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-    height: auto;
+/* Responsividade */
+@media screen and (max-width: 720px) {
+  .form {
+      padding: 1rem;
   }
 
-  .tela_doacao {
-    padding: 40px;
-    width: 100%;
-    height: auto;
+  .form-header h1 {
+      font-size: 18px;
   }
 
-  h1 {
-    font-size: 28px;
-    text-align: center;
+  .input-box input {
+      font-size: 14px;
+      padding: 10px;
   }
 
-  .controle-quantidade {
-    flex-direction: column;
-    gap: 5px;
+  .continue-button {
+      flex-direction: column; /* Botões ficam empilhados em telas pequenas */
   }
 
-  input[type="number"],
-  input[type="text"],
-  #description {
-    width: 100%;
-    max-width: none;
+  .continue-button button {
+      padding: 8px 16px;
+      font-size: 14px;
+      width: 100%; /* Botões ocupam toda a largura na tela pequena */
+      margin-top: 10px;
   }
 
-  .login-button button {
-    width: 100%;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .button-container button {
-    width: 100%;
+  .continue-button button:nth-child(2) {
+      margin-top: 0;
   }
 }
