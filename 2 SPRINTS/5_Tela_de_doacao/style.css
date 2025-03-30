@@ -323,3 +323,47 @@ h3 {
 .button-container button:active {
   transform: scale(0.95);
 }
+
+/* Estilos para telas menores, como celulares */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    height: auto;
+  }
+
+  .tela_doacao {
+    padding: 40px;
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .controle-quantidade {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  input[type="number"],
+  input[type="text"],
+  #description {
+    width: 100%;
+    max-width: none;
+  }
+
+  .login-button button {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container button {
+    width: 100%;
+  }
+}
