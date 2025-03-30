@@ -77,7 +77,7 @@ body {
 
 .testeimag2 {
     mix-blend-mode: darken;
-    width: 12%; /* Ajuste a largura para 10% ou o valor que desejar */
+    width: 10%; /* Ajuste a largura para 10% ou o valor que desejar */
     height: auto; /* Mantém a proporção da imagem */
     display: flex;
     justify-content: center;
