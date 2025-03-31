@@ -5,15 +5,41 @@
 
 body {
     background-image: url("./img/Brown Illustrative International Youth Day Instagram Post (1) 1.png");
-    background-color: #8348B7; /* Mantém a cor de fundo no restante da página */
-    background-size: 100% auto; /* Largura total, altura automática */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-    background-position: top center; /* Mantém a imagem no topo */
+    background-color: #8348B7;
+    background-repeat: no-repeat;
+    background-position: top center;
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    position: relative; /* Mantém o fundo atrás do conteúdo */
-    height: 100vh; /* Define a altura total da tela para evitar cortes */
+    position: relative;
+    min-height: 100vh; /* Alterado de height para min-height */
+    
+    /* Nova abordagem responsiva para a imagem de fundo */
+    background-size: cover; /* Cobrirá toda a área mantendo a proporção */
+    
+    /* Garantir que a imagem cubra a parte superior sem distorcer */
+    background-attachment: fixed; /* Opcional - mantém fixo durante scroll */
+    
+    /* Fallback para browsers antigos */
+    @supports not (background-size: cover) {
+        background-size: 100% auto;
+    }
+}
+
+/* Camada de sobreposição para garantir legibilidade do conteúdo */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+                rgba(201, 180, 219, 0) 0%, 
+                rgba(131, 72, 183, 1) 20%,
+                rgba(131, 72, 183, 1) 100%);
+    z-index: -1; /* Fica atrás do conteúdo mas na frente do background */
+    pointer-events: none; /* Permite interação com elementos abaixo */
 }
 
 
