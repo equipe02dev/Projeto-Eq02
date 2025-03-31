@@ -158,19 +158,6 @@ body {
     margin-top: 15px;
 }
 
-/* ====== Responsividade: Ajustes para telas menores ====== */
-@media (max-width: 480px) {
-    .input-container {
-        flex-direction: column; /* Empilha o input e o botão em telas menores */
-        gap: 5px;
-    }
-
-    .login-button button {
-        width: 100%; /* Faz o botão ocupar toda a largura */
-    }
-}
-
-
 
 .service-container {
     display: flex;
@@ -529,59 +516,6 @@ footer {
     color: #134A28;  /* Cor verde para manter a identidade visual */
     font-weight: bold;  /* Deixa o texto em negrito */
     margin-bottom: 15px;  /* Espaçamento inferior */
-}
-/* Importação da Fonte */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.nav-links a:hover {
-    background-color: rgb(167, 88, 241);
-}
-
-.painel_doacao {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 40px auto;
-    text-align: center;
-}
-
-.login-button button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #134A28;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.login-button button:hover {
-    background-color: #227040;
 }
 
 /* Telas médias (acima de 768px) */
