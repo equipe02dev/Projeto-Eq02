@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    min-height: 100vh; /* Alterado de height para min-height */
+    min-height: 100vh; /* Alterado de height para min-height *
     
     /* Nova abordagem responsiva para a imagem de fundo */
     background-size: cover; /* Cobrirá toda a área mantendo a proporção */
@@ -48,16 +48,21 @@ body::after {
     z-index: 1; /* Garante que os elementos fiquem acima da imagem de fundo */
 }
 
+
 .container1 {
     display: flex;
-    position: relative; /* Garante que o menu fique no fluxo da página */
-    top: 0; /* Vai ficar no topo da página */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* O menu ocupa toda a largura da tela */
-    padding: 15px 5px; /* Ajusta o espaço interno, com espaçamento lateral */
-    justify-content: space-between; /* Distribui os itens com espaço entre */
-    align-items: center; /* Centraliza verticalmente os itens */
-    height: 100px; /* Altura do menu */
+    position: relative; /* Mantém no fluxo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 5px; /* Reduz o espaço interno */
+    justify-content: flex-start; /* Alinha os itens no início */
+    align-items: center; /* Centraliza verticalmente */
+    height:120px; /* Reduz a altura */
+    gap: 2px; /* Reduz a distância entre os itens */
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: 10px auto; /* Centraliza e adiciona margem externa */
+    padding: 15px; /* Espaçamento interno */
 }
 
 
@@ -66,12 +71,12 @@ body::after {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 10px;
+    gap: 5px;
 }
 
 .nav-links li {
-    padding: 5px 10px;
-    font-size: 18px;
+    padding: 1px 3px;
+    font-size: 16px;
 }
 
 .nav-links a {
@@ -80,8 +85,8 @@ body::after {
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 5px 15px;
+    gap: 1px;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 
@@ -90,8 +95,8 @@ body::after {
 }
 
 .nav-links i {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +108,7 @@ body::after {
 
 .testeimag2 {
     mix-blend-mode: darken;
-    width: 12%; /* Ajuste a largura para 10% ou o valor que desejar */
+    width: 10%; /* Ajuste a largura para 10% ou o valor que desejar */
     height: auto; /* Mantém a proporção da imagem */
     display: flex;
     justify-content: center;

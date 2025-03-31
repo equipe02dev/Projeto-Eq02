@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const imagem = document.querySelector('.testeimag2');
 
 // Aplica estilos dinâmicos (sem borda)
-imagem.style.padding = '10px'; // Espaçamento interno
+imagem.style.padding = '9px'; // Espaçamento interno
 imagem.style.backgroundColor = '#f9f9f9'; // Cor de fundo
 imagem.style.transition = 'transform 0.3s ease'; // Transição suave
 
